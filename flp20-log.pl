@@ -101,7 +101,7 @@ init('S').
 final('F').
 
 % Checks whether a given character is a rule separator.
-% rule_sep(?Char)
+% sep(?Char)
 sep(' ').
 
 % Checks whether a given character is the left shift symbol.
