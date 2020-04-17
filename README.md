@@ -32,11 +32,16 @@ printed to the standard output.
 ## Tests
 In the directory `tests`, there are some testing input files (`.in` extension)
 and corresponding outputs (`.out` extension). There is the brief description
-of these files:
-- `a2n-abn` -
-- `ab` -
-- `an-bn` -
-- `anbncn` -
-- `ref` -
-- `invalid-format` -
-- `abnormal-termination` -
+of these files (`#` denotes the blank symbol):
+- `invalid-format` - invalid format of an input file (there are some illegal
+  characters). Running time: 0.014s.
+- `abnormal-termination` - abnormal termination of a Turing machine (there is
+  no final state). Running time: 0.020s.
+- `ref` - a reference example. Running time: 0.013s.
+- `ab` - accepts the following language `#(a|b)^n#`. Running time: 0.116s.
+- `an-bn` - modifies the tape from the format `#a^n#` to the format `#b^n#`.
+  Running time: 3.863s.
+- `a2n-abn` - modifies the tape from the format `#a^2n#` to the format
+  `#(ab)^n#`. Running time: 1.039s.
+- `anbncn` - accepts the following language `#a^nb^nc^n#` (it is likely that
+  global stack limit needs to be increase). Running time: 29.203s.
